@@ -1,5 +1,11 @@
 let count = 1;
 
+const goButton = document.querySelector("#goButton");
+const resetButton = document.querySelector("#resetButton");
+
+goButton.addEventListener("click", goButtonClickHandler);
+resetButton.addEventListener("click", resetButtonClickHandler);
+
 function goButtonClickHandler() {
 	let x = document.querySelector("#ph")?.value;
 
@@ -11,6 +17,7 @@ function goButtonClickHandler() {
 			
 			document.querySelector(id).innerHTML = x[i];
 		}
+
 		count++;
 		return;
 	}
@@ -25,12 +32,12 @@ function goButtonClickHandler() {
 	}
 }
 
-function resetButtonClickHandler() // remove input
+function resetButtonClickHandler()
 {
 	location.reload();
 };
 
-function myFunction() {
+function myFunction() { // give it a proper name
 	let text = document.querySelector("#iname").value;
 
 	document.querySelector("#demo").innerHTML = text + " - You wrote ";
@@ -42,10 +49,10 @@ function signerIn() {
 
 	if (name == "Victor" && parola == "0909") {
 		document.querySelector("#demo1").innerHTML = "Good to see you " + name;
-	} else {
-		document.querySelector("#demo1").innerHTML = "Sorry, this Acount doesn't exist!";
-	}
+		return;
+	} 
 
+	document.querySelector("#demo1").innerHTML = "Sorry, this Acount doesn't exist!";
 };
 
 //event
@@ -63,8 +70,6 @@ if (alertB) {
 		alert('You clicked the button');
 	});
 }
-
-
 
 var page2 = document.querySelector("#page2");
 
