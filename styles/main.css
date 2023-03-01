@@ -1,0 +1,223 @@
+
+#bodytag
+{
+  align-items: top;
+  background-color:#0C08;
+}
+
+table, th, td
+{
+  border-collapse:collapse;
+  border: 4px solid black;
+  background-color: #0C9B0C;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+table
+{
+margin-right: 500px;
+position: absolute;
+top: 225px;
+}
+th, td
+{
+height: 80px;
+width: 80px;
+}
+img 
+{
+  padding-top: 0.5px;
+  width:100px;
+  height:86px;
+  position: absolute;
+}
+#let
+{
+   color: blue;
+   text-shadow: 2px 2px 5px green;
+   font-size: 40px;
+   margin-right: 600px;
+   margin-left: 30px;
+}
+.navbar
+{
+text-align: right;
+padding-bottom: 1px;
+padding-left: 10px;
+padding-right: 10px;
+margin-bottom: 1px;
+padding-top: 5px;
+border-bottom: solid 5px #1923F0;
+background-color:black;
+
+}
+
+ul{
+    display: block;
+    list-style-type: disc;
+}
+.footer
+{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+
+}
+.footer.a
+{
+  background-color: green;
+}
+a
+{
+ margin-right: 30px; 
+ text-decoration-line:none;
+ font-size: 35px;
+ font-style: italic;
+ font-family: cursive;
+ color:green;
+}
+
+
+
+#ph
+{
+ font-family:cursive;
+ font-style: italic;
+}
+#ph
+{
+height: 50px;
+width: 515px;
+font-size: 20px;
+border-style: groove;
+border-radius: 10px;
+}
+#button1, #button2
+{
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+  font-family:cursive;
+  border-style: groove;
+  border-radius: 10px;
+  background-color: #0C08A5;
+  color: white;
+}
+#pptx
+{
+ text-decoration-line:none;
+ font-size: 25px;
+ font-style: normal; 
+ font-family: serif;
+ color: black;
+}
+#pptx1
+{
+ text-decoration-line:underline;
+ font-size: 25px;
+ font-style: normal; 
+ font-family: serif;
+ color: #4D17C8;
+}
+#reg
+{
+  position: absolute;
+  right: 250px;
+  display: inline;
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+}
+#reg1
+{
+  position: absolute;
+  right: 250px;
+  display: inline;
+  margin-top: 40px;
+  width: 100px;
+  height: 50px;
+}
+#reg2
+{
+  position: absolute;
+  right: 250px;
+  display: inline;
+  margin-top: 55px;
+  width: 100px;
+  height: 50px;
+}
+#iname, #ipassword
+{
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: blue;
+ color: white;
+}
+#iname::-webkit-input-placeholder, 
+#ipassword::-webkit-input-placeholder
+{
+  color: gray;
+}
+#reg0
+{
+position: absolute;
+position: inline;
+right: 10px;
+height: 200px;
+width: 400;
+background-color: #D5F3F3;
+border: 2px solid black;
+border-radius: 5px;
+}
+#aut
+{
+  margin-top: 10px;
+  margin-left: 50px;
+  height: 35px;
+  width: 200px;
+  font-size: 20px;
+  font-family:cursive;
+  border-style: groove;
+  border-radius: 10px;
+  background-color: #241D1D;
+  color: white;
+}
+  #tryAgain
+{
+  margin-top: 20px;
+  margin-left: 100px;
+  height: 25px;
+  width: 100px;
+  font-size: 15px;
+  font-family:cursive;
+  border-style: groove;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+}
+#long
+{
+  font-size: 20px;
+  font-family:cursive; 
+  color: red;
+}
+#demo
+{
+  position: absolute;
+  right: 30px;
+}
+#demo1
+{
+
+font-size:30px;
+font-family: serif;
+text-decoration-color: black;
+
+}
