@@ -144,4 +144,4 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 # Trash unless you run a ci pipeline
-.package-lock.json
+package-lock.json
