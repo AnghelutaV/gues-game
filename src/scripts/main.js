@@ -55,7 +55,7 @@ function signerIn() {
 	document.querySelector("#demo1").innerHTML = "Sorry, this Acount doesn't exist!";
 };
 
-//event
+// this event doesn't work
 let alertB = document.querySelector("#AlertB");
 
 alertB.addEventListener(click, function1);
@@ -63,13 +63,8 @@ alertB.addEventListener(click, function1);
 function function1() {
 	alert("hello alert system");
 }
-
-if (alertB) {
-	// Not called
-	alertB.addEventListener('click', () => {
-		alert('You clicked the button');
-	});
-}
+ 
+// this event doesn't work 
 
 var page2 = document.querySelector("#page2");
 
