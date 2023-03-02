@@ -58,7 +58,7 @@ function signerIn() {
 // this event doesn't work
 let alertB = document.querySelector("#AlertB");
 
-alertB.addEventListener(click, function1);
+alertB.addEventListener("click", function1);
 
 function function1() {
 	alert("hello alert system");
