@@ -28,12 +28,11 @@ function goButtonClickHandler() {
 		return;
 	}
 
-	const wordRow = document.querySelector(`#tab > tbody > tr:nth-child(${++wordIndex})`);
+	const wordRow = document.querySelector(`#tab .word:nth-child(${++wordIndex})`);
 	const letters = inputText.split('');
 
-	const letterCells = [...wordRow.childNodes.values()]
-		.filter((node) => node.nodeName === 'TD' && node.classList.contains('letter'));
-
+	const letterCells = wordRow.querySelectorAll(".letter");
+	debugger;
 	letters.forEach((letter, index) => {
 		letterCells[index].innerHTML = letter;
 	});
