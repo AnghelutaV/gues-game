@@ -1,38 +1,48 @@
-
 const goButton = document.querySelector("#goButton");
 const resetButton = document.querySelector("#resetButton");
 const errorMessageNode = document.querySelector("#long");
+const textInputNode = document.querySelector("#ph");
 
 goButton.addEventListener("click", goButtonClickHandler);
 resetButton.addEventListener("click", resetButtonClickHandler);
 
 let wordIndex = 0;
 
-function goButtonClickHandler() {
-
-	const inputText = document.querySelector("#ph").value;
+function validateInput(inputText) {
 	const wordLength = inputText.length;
 
 	if (wordLength > 6) {
 		errorMessageNode.innerHTML = 'Atenție! Ați introdus un cuvînt prea lung!';
-		return;
+		return false;
 	}
 
 	if (wordLength < 6) {
 		errorMessageNode.innerHTML = 'Atenție! Ați introdus un cuvînt prea scurt!';
-		return;
+		return false;
 	}
 
 	if (wordIndex >= 6) {
-		errorMessageNode.innerHTML = 'Atenție! Tabelul este plin!';
+		errorMessageNode.innerHTML = 'Atenție! Ați introdus deja 6 cuvinte!';
+		return false;
+	}
+
+	return true;
+}
+
+function goButtonClickHandler() {
+
+	const enteredText = textInputNode.value;
+	const isInputValid = validateInput(enteredText);
+
+	if (!isInputValid) {
 		return;
 	}
 
 	const wordRow = document.querySelector(`#tab .word:nth-child(${++wordIndex})`);
-	const letters = inputText.split('');
-
 	const letterCells = wordRow.querySelectorAll(".letter");
-	debugger;
+
+	const letters = enteredText.split('');
+
 	letters.forEach((letter, index) => {
 		letterCells[index].innerHTML = letter;
 	});
