@@ -53,6 +53,7 @@ function resetButtonClickHandler() {
 };
 
 // activated on page index.html
+/*
 const stubPageClickHandler = e => {
 	e.preventDefault();
 	window.history.replaceState({}, "", "/");
@@ -62,9 +63,8 @@ const stubPageClickHandler = e => {
 const page2 = document.querySelector("#page2");
 const page3 = document.querySelector("#page3");
 
+
 page2.addEventListener("click", stubPageClickHandler);
 page3.addEventListener("click", stubPageClickHandler);
+*/
 
-function resetButtonClickHandler() {
-	location.reload();
-};
