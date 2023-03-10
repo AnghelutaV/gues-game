@@ -108,22 +108,6 @@ a {
   color: white;
 }
 
-#pptx {
-  text-decoration-line: none;
-  font-size: 25px;
-  font-style: normal;
-  font-family: serif;
-  color: black;
-}
-
-#pptx1 {
-  text-decoration-line: underline;
-  font-size: 25px;
-  font-style: normal;
-  font-family: serif;
-  color: #4D17C8;
-}
-
 #reg {
   position: absolute;
   right: 250px;
