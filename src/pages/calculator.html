@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="../styles/main.css" type="text/css">
-  <script src="../scripts/rulesScript.js" defer></script>
+  <script src="../scripts/calcScript.js" defer></script>
   <title>VA YOUTH</title>
 </head>
 
@@ -17,13 +17,25 @@
     </ul>
   </nav>
   <select id="parameters">  
-    <option id="parameter">Compresion</option>
-    <option id="parameter">Water content</option>
-    <option id="parameter">Revenirea Elastic</option>
-    <option id="parameter">Bitumen content</option>
-    <option id="parameter">Average</option>
+    <option id="parameter1" value="Compresion">Compresion</option>
+    <option id="parameter2" value="Water content">Water content</option>
+    <option id="parameter3" value="Revenirea Elastica">Revenirea Elastica</option>
+    <option id="parameter4" value="Bitumen content">Bitumen content</option>
+    <option id="parameter5" value="Average">Average</option>
 </select>
 
+<div id ="inputSpaceC">
+<input id="inputParameterForce" placeholder="Insert force in N">
+<input id="inputParameterArea" placeholder="Insert Area in mm2">
+<button id="calculateBtn" type="button">Calculate</button>
+</div>
+<div id ="inputSpaceW">
+    <input id="inputParameterForce" placeholder="wet mass, g">
+    <input id="inputParameterArea" placeholder="dry mass, g">
+    <button id="calculateBtn" type="button">Calculate</button>
+    </div>
+
+<p id="result"></p>
     <footer>
       <nav class="footer">
         <ul>

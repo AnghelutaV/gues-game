@@ -82,14 +82,9 @@ a {
   color: green;
 }
 
-
-
 #ph {
   font-family: cursive;
   font-style: italic;
-}
-
-#ph {
   height: 50px;
   width: 515px;
   font-size: 20px;
@@ -190,8 +185,9 @@ a {
 #long {
   font-size: 20px;
   font-family: cursive;
-  color: red;
+  color: rgb(255, 0, 0);
   text-decoration: underline;
+  background-color: #0fdd2e;
 }
 
 #demo {
@@ -211,6 +207,7 @@ a {
 {
   margin-left: 50px;
 }
+/*page calc*/
 .bodyCalc, .indexBody, .rulesBody
 {
 background-image:url("../../assets/mathBackground.jpg") ;
@@ -223,4 +220,20 @@ background-size: cover;
   font-size: 40px;
   color: #03fc03;
   background-color: #0C08A5;
+}
+#result{
+  font-size: 40px;
+  color: #03fc03;
+  background-color: #0C08A5;
+}
+#inputSpaceC, #inputSpaceW {
+  position: absolute;
+  position: inline;
+  right: 10px;
+  height: 200px;
+  width: 800px;
+  background-color: #D5F3F3;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: none;
 }
