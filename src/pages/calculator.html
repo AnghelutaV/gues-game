@@ -16,24 +16,41 @@
       <a id="page3" href="#">Page 3</a>
     </ul>
   </nav>
-  <select id="parameters">  
+  <select id="parameters" >  
     <option id="parameter1" value="Compresion">Compresion</option>
     <option id="parameter2" value="Water content">Water content</option>
     <option id="parameter3" value="Revenirea Elastica">Revenirea Elastica</option>
     <option id="parameter4" value="Bitumen content">Bitumen content</option>
-    <option id="parameter5" value="Average">Average</option>
 </select>
 
-<div id ="inputSpaceC">
-<input id="inputParameterForce" placeholder="Insert force in N">
-<input id="inputParameterArea" placeholder="Insert Area in mm2">
-<button id="calculateBtn" type="button">Calculate</button>
-</div>
-<div id ="inputSpaceW">
-    <input id="inputParameterForce" placeholder="wet mass, g">
-    <input id="inputParameterArea" placeholder="dry mass, g">
-    <button id="calculateBtn" type="button">Calculate</button>
+
+    <div class = "inp" id ="inputSpaceC">
+    <input id="inputParameterForce" placeholder="Insert force in N">
+    <input id="inputParameterArea" placeholder="Insert Area in mm2">
+    <button id="calculateBtn1" type="button" onclick="resistance()">Calculate</button>
+    <p id="result1"></p>
     </div>
+
+    <div class = "inp" id ="inputSpaceW">
+    <input id="inputParameterWet" placeholder="wet mass, g">
+    <input id="inputParameterDry" placeholder="dry mass, g">
+    <button id="calculateBtn2" type="button" onclick="water()">Calculate</button>
+    <p id="result2"></p>
+    </div>
+
+    <div class = "inp" id ="inputSpaceRE">
+      <input id="inputParameterL" placeholder="Lungimea intinsa, mm">
+      <input id="inputParameterR" placeholder="lungimea dupa revenire, mm">
+      <button id="calculateBtn3" type="button" onclick="recover()">Calculate</button>
+      <p id="result3"></p>
+      </div>
+
+      <div class = "inp" id ="inputSpaceBC">
+        <input id="inputParameterM1" placeholder="masa mixturei, g">
+        <input id="inputParameterM2" placeholder="masa mixturii calcinate, g">
+        <button id="calculateBtn4" type="button" onclick="bitum()">Calculate</button>
+        <p id="result4"></p>
+        </div>
 
 <p id="result"></p>
     <footer>

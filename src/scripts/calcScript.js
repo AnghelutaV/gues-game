@@ -1,45 +1,58 @@
+'use strict'
 let selectParameter = document.querySelector("#parameters");
-//document.querySelector("#result").innerHTML=selectParameter;
-
 selectParameter.addEventListener("click", calculateParameters);
 
 function calculateParameters(){
-    let selectP = document.querySelector("#parameters").value;
-    if (selectP ==="Compresion") {
-        
-        document.querySelector("#inputSpaceC").style.display = "block";
-
-        let inputParameterF = document.querySelector("#inputParameterForce").placeholder = "Force in N";
-        let inputParameterA = document.querySelector("#inputParameterArea").placeholder = "Area in mm2";
-
-        const calculate = document.querySelector("#calculateBtn");
-        calculate.addEventListener("click", calculateCompresion);
-
-        function calculateCompresion(){
-        let inputParameterF = document.querySelector("#inputParameterForce").value;
-        let inputParameterA = document.querySelector("#inputParameterArea").value;
-
-        document.querySelector("#result").innerHTML =  
-        "<p>"+ inputParameterF / inputParameterA + " MPa" + "</p>";
-        }
-       
+   let  selectItem = document.querySelector("#parameters").value;
+   
+    switch (selectItem) {
+    case "Compresion":
+        hideAllInputs();
+        document.querySelector("#inputSpaceC").style.display = "block";       
+        break;
+    case "Water content":
+        hideAllInputs();
+        document.querySelector("#inputSpaceW").style.display = "block"; 
+        break;
+     case "Revenirea Elastica":
+        hideAllInputs();
+        document.querySelector("#inputSpaceRE").style.display = "block";
+        break;
+     case "Bitumen content":
+        hideAllInputs();
+        document.querySelector("#inputSpaceBC").style.display = "block";
+        break;    
+    default:
+        break;
     }
+}
+//function for hiding all imputs, for displaying just one of them
+function hideAllInputs() {
+  document.querySelectorAll(".inp").forEach(function(el){
+  el.style.display = "none";});
+}
 
-    if (selectP ==="Water content") {
-
-        document.querySelector("#inputSpaceW").style.display = "block";
-
-        let inputParameterF = document.querySelector("#inputParameterForce").placeholder = "wet mass";
-        let inputParameterA = document.querySelector("#inputParameterArea").placeholder = "dry mass";
-        const calculate = document.querySelector("#calculateBtn");
-        calculate.addEventListener("click", calculateWater);
-        
-        function calculateWater(){
-            let inputParameterF = document.querySelector("#inputParameterForce").value;
-            let inputParameterA = document.querySelector("#inputParameterArea").value;
-    
-            document.querySelector("#result").innerHTML =  
-            "<p>"+ inputParameterF * inputParameterA + " MPa" + "</p>";
-        }
-    }
+function resistance() {
+    let forceA = document.querySelector("#inputParameterForce").value;
+    let base = document.querySelector("#inputParameterArea").value;
+    let res = forceA / base;
+    document.querySelector("#result1").innerHTML = res + " MPa";
+}
+function water() {
+    let wetMass = document.querySelector("#inputParameterWet").value;
+    let dryMass = document.querySelector("#inputParameterDry").value;
+    let res = ((wetMass - dryMass) / wetMass) * 100;
+    document.querySelector("#result2").innerHTML = res + " %";
+}
+function recover() {
+    let totalLenght = document.querySelector("#inputParameterL").value;
+    let recoverLenght = document.querySelector("#inputParameterR").value;
+    let res = ((totalLenght - recoverLenght) / totalLenght) * 100;
+    document.querySelector("#result3").innerHTML = res + " %";
+}
+function bitum() {
+    let initialMass = document.querySelector("#inputParameterM1").value;
+    let finalMass = document.querySelector("#inputParameterM2").value;
+    let res = ((initialMass - finalMass) / initialMass) * 100;
+    document.querySelector("#result4").innerHTML = res + " %";
 }

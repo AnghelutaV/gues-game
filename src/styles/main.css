@@ -221,12 +221,12 @@ background-size: cover;
   color: #03fc03;
   background-color: #0C08A5;
 }
-#result{
+#result1,#result2, #result3, #result4 {
   font-size: 40px;
   color: #03fc03;
   background-color: #0C08A5;
 }
-#inputSpaceC, #inputSpaceW {
+#inputSpaceC, #inputSpaceW, #inputSpaceRE, #inputSpaceBC {
   position: absolute;
   position: inline;
   right: 10px;
