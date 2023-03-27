@@ -55,4 +55,4 @@ function bitum() {
     let res = ((initialMass - finalMass) / initialMass) * 100;
     document.querySelector("#result4").innerHTML = res + " %";
 }
-//o comment to know
+//a comment to know
