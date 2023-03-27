@@ -1,4 +1,3 @@
-'use strict'
 let selectParameter = document.querySelector("#parameters");
 selectParameter.addEventListener("click", calculateParameters);
 
